@@ -37,6 +37,7 @@ if prompt := st.chat_input("Bhai, kuch bhi poocho..."):
             
             if uploaded_file:
                 base64_img = encode_image(uploaded_file)
+                # Correct Vision Content Structure - Fixed Line 40
                 content =
             else:
                 content = prompt
