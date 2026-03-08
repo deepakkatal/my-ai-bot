@@ -32,19 +32,17 @@ if prompt := st.chat_input("Bhai, kuch bhi poocho..."):
 
     with st.chat_message("assistant"):
         try:
-            # FIXED: Proper Model logic
             model = "llama-3.2-11b-vision-preview" if uploaded_file else "llama-3.3-70b-versatile"
             
             if uploaded_file:
                 base64_img = encode_image(uploaded_file)
-                # Correct Vision Content Structure - Fixed Line 40
-                msg_content =
+                content =
             else:
-                msg_content = prompt
+                content = prompt
 
             response = client.chat.completions.create(
                 model=model,
-                messages=[{"role": "user", "content": msg_content}]
+                messages=[{"role": "user", "content": content}]
             )
             
             ai_ans = response.choices[0].message.content
