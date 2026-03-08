@@ -32,11 +32,12 @@ if prompt := st.chat_input("Bhai, kuch bhi poocho..."):
 
     with st.chat_message("assistant"):
         try:
+            # Model selection logic
             model = "llama-3.2-11b-vision-preview" if uploaded_file else "llama-3.3-70b-versatile"
             
             if uploaded_file:
                 base64_img = encode_image(uploaded_file)
-                # Correct Vision Content Structure - Line 39 Fixed!
+                # Correct Vision Content Structure - Line 40 Fixed!
                 content =
             else:
                 content = prompt
